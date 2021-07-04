@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from "react-router-dom"
 import { makeStyles } from '@material-ui/core/styles'
 import SideSlider from "@material-ui/core/Drawer"
 import sideBarImage from '../assets/images/background1.jpg'
@@ -55,11 +56,13 @@ const myStyles = makeStyles(theme => ({
 const iconMenu = [
     {
         listIcon: <Home />,
-        listText: "Home"
+        listText: "Home",
+        listPath: "/"
     },
     {
         listIcon: <AssignmentInd />,
-        listText: "Resume"
+        listText: "Resume",
+        listPath: "/Resume"
     },
     {
         listIcon: <Apps />,
@@ -91,7 +94,7 @@ export const Navbar = () => {
             <Divider />
             <List>
                 {iconMenu.map((lsItem, key) => (
-                    <ListItem button key={key}>
+                    <ListItem button key={key} component={Link} to={lsItem.listPath}>
                         <ListItemIcon className={classes.listItem}>
                             {lsItem.listIcon}
                         </ListItemIcon>
@@ -99,7 +102,7 @@ export const Navbar = () => {
                     </ListItem>
                 ))}
             </List>
-            
+
         </Box>
 
     )
@@ -110,7 +113,7 @@ export const Navbar = () => {
                     <Toolbar>
 
                         <Typography className="topnav" id="myTopnav">
-                            <a onClick={sliderMove("right", true)} className="active">Find out more about Micheal</a>
+                            <a  onClick={sliderMove("right", true)} className="active">Find out more about Micheal</a>
                         </Typography>
 
                         <SideSlider

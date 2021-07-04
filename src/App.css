@@ -44,7 +44,10 @@
   padding-bottom: 5px;
 }
 .MuiListItemText-primary:hover {
-  background: grey;
+  background: rgba(128, 128, 128, 0.33);
+  border: 0px solid black;
+  border-radius: 15px;
+  color: white;
 }
 .MuiListItem-root {
   text-align: center !important;
@@ -81,15 +84,118 @@
   z-index: -1;
   font-size: 20px;
 }
-@media (max-width: 480px) {
+
+.container ul {
+  margin: 0;
+  margin-top: 50px;
+  list-style: none;
+  position: relative;
+  padding: 1px 475px;
+  color: #fff;
+  font-size: 21px;
+}
+.container ul:before {
+  content: "";
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  border-left: 2px dashed #fff;
+}
+.container ul li {
+  position: relative;
+  margin-left: 30px;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 14px;
+  border-radius: 6px;
+  width: 825px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.08);
+}
+.container ul li:not(:first-child) {
+  margin-top: 60px;
+}
+.container ul li > span {
+  width: 2px;
+  height: 100%;
+  background: #fff;
+  left: -30px;
+  top: 0;
+  position: absolute;
+}
+.container ul li > span:before,
+.container ul li > span:after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  position: absolute;
+  background: #86b7e7;
+  left: -5px;
+  top: 0;
+}
+.container ul li span:after {
+  top: 100%;
+}
+.container ul li > div {
+  margin-left: 10px;
+}
+.container div .title,
+.container div .type {
+  font-weight: 600;
+  font-size: 25px;
+}
+.container div .info {
+  font-weight: 300;
+}
+.container div > div {
+  margin-top: 5px;
+}
+.container span.number {
+  height: 100%;
+}
+.container span.number span {
+  position: absolute;
+  font-size: 15px;
+  left: -70px;
+  font-weight: bold;
+}
+.container span.number span:first-child {
+  top: 0;
+}
+.container span.number span:last-child {
+  top: 100%;
+}
+.work {
+  color: white;
+}
+
+@media (min-width: 480px) and (max-width: 649px) {
   #chi {
     height: 40vh;
   }
+  .container ul {
+    margin: 0;
+    margin-top: 275px;
+    list-style: none;
+    position: relative;
+    padding: 1px 100px;
+    color: #fff;
+    font-size: 21px;
+  }
 }
 
-@media (min-width: 481px) and (max-width: 1024px) {
+@media (min-width: 650px) and (max-width: 1024px) {
   #chi {
     height: 50vh;
+  }
+  .container ul {
+    margin: 0;
+    margin-top: 325px;
+    list-style: none;
+    position: relative;
+    padding: 1px 100px;
+    color: #fff;
+    font-size: 21px;
   }
 }
 
