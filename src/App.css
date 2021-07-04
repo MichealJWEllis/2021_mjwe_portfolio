@@ -11,11 +11,90 @@
   font-size: 17px;
 }
 .topnav a:hover {
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.35);
   color: black;
 }
 .topnav a.active {
   color: white;
   font-size: 25px;
   font-weight: bold;
+}
+
+/* body {
+  background-image: url(../src/assets/images/background1.jpg);
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+} */
+/* .sideBarImage {
+  background-image: url(./assets/images/background1.jpg);
+  height: 10rem;
+  width: 10rem;
+} */
+.MuiSvgIcon-root {
+  font-size: 3rem !important;
+  text-align: center !important;
+}
+.MuiListItemText-primary {
+  font-size: 2rem !important;
+  padding-top: 1px;
+  padding-bottom: 5px;
+}
+.MuiListItemText-primary:hover {
+  background: grey;
+}
+.MuiListItem-root {
+  text-align: center !important;
+}
+
+#myVideo {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+#chi {
+  height: 90vh;
+  width: auto;
+  border-radius: 0% 30%;
+  border: 5px solid black;
+  float: right;
+}
+#right {
+  padding-top: 3%;
+  padding-right: 5%;
+}
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+  z-index: -1;
+  font-size: 20px;
+}
+@media (max-width: 480px) {
+  #chi {
+    height: 40vh;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 1024px) {
+  #chi {
+    height: 50vh;
+  }
+}
+
+@media (min-width: 1025px) {
+  #chi {
+    height: 60vh;
+  }
 }
