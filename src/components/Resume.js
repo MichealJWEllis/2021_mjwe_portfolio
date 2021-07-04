@@ -1,9 +1,9 @@
 import React from 'react'
 import '../App.css'
-import { makeStyles } from '@material-ui/core/styles'
-import { Typography, Box } from '@material-ui/core'
+import { Typography, Box, Button } from '@material-ui/core'
 import Navbar from './Navbar'
 import Header from './Header'
+import DownloadLink from 'react-download-link'
 
 
 export const Resume = () => {
@@ -35,15 +35,22 @@ export const Resume = () => {
             <Header />
             <Box component="header">
                 <Typography variant="h4" align="center" style={{ color: "white" }}>
+
                     WORK EXPERIENCE
                 </Typography>
+
                 <Box>
-                    <div class="container">
+                    <div className="container">
                         <ul>
                             <li><span></span>
                                 <div>
-                                    <div class="title">( I.T Help-Desk Analyst / Full-Stack Developer )</div>
-                                    <div class="info">
+                                    <Button href="../assets/images/resume.pdf" style={{ background: "green" }}><DownloadLink style={{ textDecoration: "none" }}
+                                        label="Download Resume"
+                                        filename="../assets/images/resume.pdf"
+                                        exportFile={() => "Client side cache data here…"}
+                                    /></Button>
+                                    <div className="title">( I.T Help-Desk Analyst / Full-Stack Developer )</div>
+                                    <div className="info">
                                         {erie.split('\n\n').map(paragraph =>
                                             <p>
                                                 {paragraph.split('\n').reduce((total, line) => [total, <br />, line])}
@@ -52,13 +59,13 @@ export const Resume = () => {
 
                                     </div>
 
-                                </div> <span class="number"><span>Current</span> <span>August 2020</span></span>
+                                </div> <span className="number"><span>Current</span> <span>August 2020</span></span>
                             </li>
                             <li>
                                 <div><span></span>
-                                    <div class="title">(I.T / Help-desk Analyst)
+                                    <div className="title">(I.T / Help-desk Analyst)
                                     </div>
-                                    <div class="info">
+                                    <div className="info">
                                         {alro.split('\n\n').map(paragraph =>
                                             <p>
                                                 {paragraph.split('\n').reduce((total, line) => [total, <br />, line])}
@@ -67,12 +74,12 @@ export const Resume = () => {
 
                                     </div>
 
-                                </div> <span class="number"><span>August 2020</span> <span>June 2017</span></span>
+                                </div> <span className="number"><span>August 2020</span> <span>June 2017</span></span>
                             </li>
                             <li>
                                 <div><span></span>
-                                    <div class="title">(CAD Operator / Shift Supervisor)</div>
-                                    <div class="info">
+                                    <div className="title">(CAD Operator / Shift Supervisor)</div>
+                                    <div className="info">
                                         {alro2.split('\n\n').map(paragraph =>
                                             <p>
                                                 {paragraph.split('\n').reduce((total, line) => [total, <br />, line])}
@@ -80,7 +87,7 @@ export const Resume = () => {
                                         )}
 
                                     </div>
-                                </div> <span class="number"><span>June 2017</span> <span>March 2013</span></span>
+                                </div> <span className="number"><span>June 2017</span> <span>March 2013</span></span>
                             </li>
 
                         </ul>

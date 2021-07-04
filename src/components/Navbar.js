@@ -47,7 +47,7 @@ const myStyles = makeStyles(theme => ({
         color: "white",
         width: 50,
         height: 50,
-        marginRight: theme.spacing.unit * 2
+        marginRight: theme.spacing(2)
 
 
     }
@@ -66,11 +66,13 @@ const iconMenu = [
     },
     {
         listIcon: <Apps />,
-        listText: "Portfolio"
+        listText: "Portfolio",
+        listPath: "/Portfolio"
     },
     {
         listIcon: <ContactMail />,
-        listText: "Contact Me"
+        listText: "Contact Me",
+        listPath: "/Contact"
     }
 ]
 
@@ -112,9 +114,9 @@ export const Navbar = () => {
                 <AppBar position="static" style={{ background: "rgba(0, 0, 0, 0.5)" }}>
                     <Toolbar>
 
-                        <Typography className="topnav" id="myTopnav">
-                            <a  onClick={sliderMove("right", true)} className="active">Find out more about Micheal</a>
-                        </Typography>
+                        <div className="topnav" id="myTopnav">
+                            <a onClick={sliderMove("right", true)} className="active">Find out more about Micheal</a>
+                        </div>
 
                         <SideSlider
                             anchor="left"
