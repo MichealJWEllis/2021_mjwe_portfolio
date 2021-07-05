@@ -5,6 +5,7 @@ import CssBaseline from '@material-ui/core/CssBaseline'
 import Resume from './components/Resume'
 import { Route } from 'react-router-dom'
 import Portfolio from './components/Portfolio';
+import Contact from './components/Contact'
 
 function App() {
   return (
@@ -13,6 +14,8 @@ function App() {
       <Route exact path="/" component={HomePage} />
       <Route path="/resume" component={Resume} />
       <Route path="/portfolio" component={Portfolio} />
+      <Route path="/contact" component={Contact} />
+
 
     </>
   );

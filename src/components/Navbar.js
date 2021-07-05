@@ -24,6 +24,7 @@ import {
     ContactMail
 } from '@material-ui/icons'
 import avatar from "../assets/images/ME.jpg"
+import NavFooter from "../components/NavFooter"
 
 
 // CSS STYLES
@@ -71,7 +72,7 @@ const iconMenu = [
     },
     {
         listIcon: <ContactMail />,
-        listText: "Contact Me",
+        listText: "Contact",
         listPath: "/Contact"
     }
 ]
@@ -124,6 +125,7 @@ export const Navbar = () => {
                             onClose={sliderMove("right", false)}
                         >
                             {sideBar("right")}
+                            <NavFooter />
                         </SideSlider>
                     </Toolbar>
                 </AppBar>

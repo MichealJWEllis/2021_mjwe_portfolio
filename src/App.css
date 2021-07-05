@@ -45,6 +45,21 @@
   flex-wrap: wrap;
   box-sizing: border-box;
 }
+.MuiGrid-container {
+  /*! width: 100%; */
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+form.MuiBox-root {
+  width: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  padding-left: 300px;
+}
+
 .MuiGrid-item {
   margin-left: 100px;
   box-sizing: border-box;
@@ -67,6 +82,11 @@
   top: 0;
   left: 0;
   z-index: -1;
+}
+
+#contactDiv {
+  width: 0% !important;
+  padding-top: 100%;
 }
 
 #chi {

@@ -4,6 +4,7 @@ import { Typography, Box, Button } from '@material-ui/core'
 import Navbar from './Navbar'
 import Header from './Header'
 import DownloadLink from 'react-download-link'
+import Footer from './Footer'
 
 
 export const Resume = () => {
@@ -44,7 +45,7 @@ export const Resume = () => {
                         <ul>
                             <li><span></span>
                                 <div>
-                                    <Button href="../assets/images/resume.pdf" style={{ background: "green" }}><DownloadLink style={{ textDecoration: "none" }}
+                                    <Button href="../assets/images/resume.pdf" style={{  background: "green" }}><DownloadLink style={{ color: "white",textDecoration: "none" }}
                                         label="Download Resume"
                                         filename="../assets/images/resume.pdf"
                                         exportFile={() => "Client side cache data here…"}
@@ -95,8 +96,11 @@ export const Resume = () => {
 
                 </Box>
             </Box>
+
         </div>
+
+
     )
 }
-// 
+
 export default Resume
